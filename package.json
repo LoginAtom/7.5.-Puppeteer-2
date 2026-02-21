@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --runInBand",
     "cucumber": "cucumber-js",
-    "cucumber2": "cucumber-js --tags=@omly"
+    "cucumber2": "cucumber-js --tags=@only"
   },
   "author": "",
   "license": "ISC",
