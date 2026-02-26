@@ -71,7 +71,8 @@ Then("user sees the title {string}", async function(string) {
     await expect(actual).contain(eexpected)
 })
 Then("Button for booking has property disabled: {string}", async function(string) {
-    await expect(String(await page.$eval("button", (button) => {
-        return button.disabled
-    }))).contain("true")
-})
+    const disabledProperty = await this.page.$eval("button", (button) => {
+        return button.disabled;
+    });
+    await expect(String(disabledProperty)).to.contain(string);
+});
